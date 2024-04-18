@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    function setdata(){
+    public function setdata() {
         echo "Im the example of controller in laravel";
     }
 }

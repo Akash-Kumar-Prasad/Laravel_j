@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\MyController;
+use App\Http\Controllers\MyController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,4 +13,4 @@ Route::get('test', function(){
 
 Route::view('homepage', 'home');
 
-Route::get('pdata',[MyController::class,'setdata']);
+Route::get('pdata', [MyController::class,'setdata']);
