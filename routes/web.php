@@ -2,18 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\TestController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/testfunction', function () {
+    echo "small test function";
 });
 
-Route::get('test', function(){
-    return view('home');
+Route::get('testview', function(){
+    return view('user');
 });
 
-// Route::view('homepage', 'home');
+Route::view('userpage', 'user');
 
-// Route::get('pdata', [MyController::class,'setdata']);
+Route::get('processdata', [TestController::class,'testdata']);
+
+Route::get('pdata', [MyController::class,'setdata']);
+
+
+
+
+
+
+
 
 // Route::get('/user/{age}', function($age){
 // if($age<30)
@@ -51,15 +61,15 @@ Route::get('test', function(){
 // echo $name;
 // })->where('name', '[A-Za-z]+');
 
-Route::get('/emp/{id}',function($id){
-    echo "Employee ID ".$id;
-})->where('id','[0-9]+');
+// Route::get('/emp/{id}',function($id){
+//     echo "Employee ID ".$id;
+// })->where('id','[0-9]+');
 
-Route::get('/name/{name}/age/{age}', function($name, $age){
-    echo "Name : ".$name. " Age : ".$age;
-})->where(['name'=>'[A-Za-z]+', 'age'=>'[0-9]+']);
+// Route::get('/name/{name}/age/{age}', function($name, $age){
+//     echo "Name : ".$name. " Age : ".$age;
+// })->where(['name'=>'[A-Za-z]+', 'age'=>'[0-9]+']);
 
 
-Route::fallback(function(){
-    echo "this url is not allowed in this URL";
-});
+// Route::fallback(function(){
+//     echo "this url is not allowed in this URL";
+// });
