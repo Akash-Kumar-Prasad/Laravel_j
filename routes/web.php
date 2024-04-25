@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\TestController;
+use Illuminate\Http\Request; //mandatorily used to accept requests
+
 
 Route::get('/testfunction', function () {
     echo "small test function";
@@ -12,17 +14,35 @@ Route::get('testview', function(){
     return view('user');
 });
 
+
 Route::view('userpage', 'user');
 
-Route::get('processdata', [TestController::class,'testdata']);
+Route::post('processform', function(Request $req){
+echo $req->username." ".$req->useremail;
+});
 
-Route::get('pdata', [MyController::class,'setdata']);
-
-
-
-
+Route::get('testpdata', [TestController::class,'testdata']);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Route::get('pdata', [MyController::class,'setdata']);
 
 
 // Route::get('/user/{age}', function($age){

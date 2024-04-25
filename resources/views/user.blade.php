@@ -6,6 +6,13 @@
   <title>client</title>
 </head>
 <body>
-  <h1>Welcome to the view.</h1>
+ <center>
+  <form action="processform" method="post">
+    @csrf
+    <input type="text" name="username" id="" placeholder="Enter Name"><br>
+    <input type="text" name="useremail" id="" placeholder="Enter Email"><br>
+    <input type="submit" value="Click Me">
+  </form>
+ </center>
 </body>
 </html>
