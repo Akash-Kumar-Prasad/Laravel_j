@@ -5,7 +5,6 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request; //mandatorily used to accept requests
 
-
 Route::get('/testfunction', function () {
     echo "small test function";
 });
