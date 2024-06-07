@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\FormController;
 use Illuminate\Http\Request; //mandatorily used to accept requests
 
 Route::get('/testfunction', function () {
@@ -20,7 +21,7 @@ Route::post('processform', function(Request $req){
 echo $req->username." ".$req->useremail;
 });
 
-Route::get('testpdata', [TestController::class,'testdata']);
+Route::post('getformdata', [FormController::class,'processdata']);
 
 
 

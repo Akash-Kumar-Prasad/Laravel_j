@@ -7,7 +7,7 @@
 </head>
 <body>
  <center>
-  <form action="processform" method="post">
+  <form action="getformdata" method="post">
     @csrf
     <input type="text" name="username" id="" placeholder="Enter Name"><br>
     <input type="text" name="useremail" id="" placeholder="Enter Email"><br>
